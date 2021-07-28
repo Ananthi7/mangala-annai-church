@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
   },
   containerWrapper: {
-    width:'100%',
+    width: '100%',
   },
 
   button: {
@@ -35,7 +35,7 @@ const useStyles = makeStyles(theme => ({
       border: 'none',
       'border-radius': 0,
     },
-     '&:after': {
+    '&:after': {
       content: '"|"',
       float: 'right',
       color: '#000',

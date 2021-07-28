@@ -15,15 +15,15 @@ import leftImage from './images/mary-left.png';
 import rightImage from './images/stantony-right.png';
 
 const HeaderWrapper = styled.div`
-max-width: 100%;
-height: 210px;
-position: relative;
-@media ${device.tablet} {
-  height: 163px;
-}
-@media ${device.mobileL} {
-  height: 100px;
-}
+  max-width: 100%;
+  height: 210px;
+  position: relative;
+  @media ${device.tablet} {
+    height: 163px;
+  }
+  @media ${device.mobileL} {
+    height: 100px;
+  }
 `;
 
 const TitleWrapper = styled.div`
@@ -40,7 +40,7 @@ const TitleWrapper = styled.div`
   }
 `;
 const LeftImgWrapper = styled.span`
-width: 143px;
+  width: 143px;
   position: absolute;
   top: 10px;
   left: 50px;
