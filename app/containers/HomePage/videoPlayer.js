@@ -1,8 +1,12 @@
 import React from 'react';
+// import { useState } from 'react';
 import ReactPlayer from 'react-player';
 import VideoContainer, {
   VideoRightPanel,
   ReadMoreButton,
+  VideoCarousalpreButton,
+  VideoCarousalnextButton,
+  videoGallery,
 } from './videoContainer';
 
 /**
@@ -10,14 +14,28 @@ import VideoContainer, {
  * Reference URL: https://www.npmjs.com/package/react-player
  */
 export default function videoPlayer() {
+  /* const [current,setcurrent]=useState(0);
+  const size=videos.Length;
+  const preButton=()=>{
+     setcurrent(current===0 ? size :current--);
+     console.log(current);
+  }
+  const nextButton=()=>{
+     setcurrent(current===size ? current :current++);
+     console.log(current);
+  } */
   return (
     <VideoContainer>
-      <ReactPlayer
-        url="https://www.youtube.com/watch?v=SEYJDNJQ4KA"
-        playing="false"
-        width="700px"
-        height="500px"
-      />
+      {videoGallery.map(videos => (
+        <ReactPlayer
+          url={videos.video}
+          playing="false"
+          width="700px"
+          height="500px"
+        />
+      ))}
+
+      <VideoCarousalpreButton>&lt;</VideoCarousalpreButton>
       <VideoRightPanel>
         <h2>About video</h2>
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
@@ -28,6 +46,7 @@ export default function videoPlayer() {
         molestie consequat,
         <ReadMoreButton>ReadMore</ReadMoreButton>
       </VideoRightPanel>
+      <VideoCarousalnextButton>&gt;</VideoCarousalnextButton>
     </VideoContainer>
   );
 }
